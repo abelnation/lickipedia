@@ -1,0 +1,3 @@
+[submodule "js/vexflow"]
+	path = js/vexflow
+	url = git@github.com:abelnation/vexflow.git
