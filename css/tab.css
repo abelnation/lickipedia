@@ -1,0 +1,16 @@
+table.tab {
+	width: 100%;
+}
+
+table.tab td {
+	vertical-align: top;
+}
+
+td.tab_properties {
+	width: 100px;
+	text-align: right;
+}
+
+td.tab_content {
+	
+}

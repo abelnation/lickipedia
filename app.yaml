@@ -1,0 +1,24 @@
+application: lickipedia
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+
+- url: /css
+  static_dir: css
+
+- url: /js
+  static_dir: js
+
+- url: /create
+  script: main.py
+  login: required
+
+- url: /edit
+  script: main.py
+  login: required
+
+- url: .*
+  script: main.py
+

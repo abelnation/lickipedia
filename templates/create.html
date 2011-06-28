@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Lickipedia | Create{% endblock %}
+
+{% block stylesheets %}
+	<link href="css/create.css" media="screen" rel="Stylesheet" type="text/css" /> 
+{% endblock %}
+	
+
+{% block content %}
+
+CREATE
+
+<form action="/save" method="post">
+{% if tab.key.id %}
+<input type="hidden" name="tab_id" value="{{ tab.key.id }}">
+{% endif %}
+	<table class="main">
+	<tr><td class="tabeditor">
+	<div class="vex-tabdiv" width=1000 scale=1.0 editor="true"
+      editor_width=1000 editor_height=220>{{ tab.tab_content }}<div>
+	</td><td class="tabproperties">
+			<table>
+			<tr><td colspan=2>Tab Properties</td></tr><tr>
+			<td>Name:</td>
+			<td><input type="text" name="name" value="{{ tab.name }}"></td>
+			</tr><tr>
+			<td>Description:</td>
+			<td><textarea name="description">{{ tab.description }}</textarea></td>
+			</tr><tr>
+			<td>Instrument:</td>
+			<td><input type="text" name="instrument" value="{{ tab.instrument|capfirst }}"></td>
+			</tr><tr>
+			<td>Tuning:</td>
+			<td><input type="text" name="tuning" value="{{ tab.tuning }}"></td>
+			</tr><tr>
+			<td colspan=2><td><input type="submit" value="save"></td>
+			</tr>
+			</table>
+	</td></tr>
+	</table>
+</form>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+
+{% block stylesheets %}
+
+{% endblock %}
+	
+
+{% block content %}
+	{% for tab in tabs %}
+		{% include "tab.html" %}
+	{% endfor %}
+{% endblock %}

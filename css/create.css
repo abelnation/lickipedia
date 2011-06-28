@@ -1,0 +1,16 @@
+
+table.main {
+	width: 100%;
+}
+
+td {
+	vertical-align: top;
+}
+
+td.tabeditor {
+	width: 1000px;
+}
+
+td.tabproperties {
+	width: 400px;
+}

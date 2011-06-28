@@ -1,0 +1,18 @@
+<table class="tab">
+<tr>
+<td class="tab_properties">
+	<p>{{ tab.name }}</p>
+	<p>{{ tab.description }}</p>
+	<p>{{ tab.instrument|capfirst }}</p>
+	<p>{{ tab.tuning }}</p>
+	{% if user %}
+	<p>
+		{% ifequal user tab.author %}
+		<a href="/edit?tab_id={{ tab.key.id }}">edit</a>
+		<a href="/delete?tab_id={{ tab.key.id }}">delete</a></p>
+		{% else %}
+		<a href="/copy?tab_id={{ tab.key.id }}">copy</a>
+		{% endifequal %}
+	{% endif %}
+</td><td class="tab_content"><div class="vex-tabdiv" width=1000 scale=1.0>{{ tab.tab_content }}</div></td>
+</table>

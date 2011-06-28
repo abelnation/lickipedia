@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>{% block title %}Lickipedia{% endblock %}</title>
+	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="author" content="Abel Allison">
+	<!-- Date: 2011-06-26 -->
+
+	<link href="css/tab.css" media="screen" rel="Stylesheet" type="text/css" />
+
+	{% include "tabdiv_includes.html" %}
+
+	{% block stylesheets %}{% endblock %}
+	
+</head>
+<body>
+
+{% include "header.html" %}
+
+{% block content %}{% endblock %}
+
+{% include "footer.html" %}
+</body>
+</html>
